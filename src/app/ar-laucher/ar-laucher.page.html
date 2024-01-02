@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">SCHOOL X - Camera</ion-title>
+    <!-- <ion-buttons slot="end">
+      <ion-button [routerLink]="['/home']">
+        <ion-icon name="close" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<!--  <div id="t1">-->
+<!--    <img src="assets/images/devpic.jpg">-->
+<!--  </div>-->
+<ion-fab slot="fixed" vertical="bottom" horizontal="end">
+  <ion-fab-button color="warning">
+    <ion-icon name="chevron-up-circle" color="success"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button color="warning" (click)="captureScreen()">
+      <ion-icon name="scan" color="success"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button color="warning" (click)="testSharing()">
+      <ion-icon name="share-social" color="success"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
+  <iframe #arFrame src="../../assets/scene.html"></iframe>
+  <div id="test">
+    <img src="{{test}}">
+  </div>
+  
+    <!-- <a-scene embedded arjs>
+      <a-marker preset="hiro">
+        <a-box position='0 0.5 0' material='color: red;'></a-box>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene> 
+  ../../assets/scene.html
+  -->
+
+  <!-- <ion-button (click)="captureScreen()">Capture d'écran</ion-button>
+  <ion-button (click)="testSharing()">Test partage</ion-button> -->
+  
+<script src="../assets/aframe.min.js"></script>
+<script src="../assets/aframe-ar.js"></script>
+</ion-content>

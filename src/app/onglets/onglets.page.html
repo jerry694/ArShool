@@ -1,0 +1,20 @@
+<ion-tabs #tabs (ionTabsDidChange)="setCurrentTab($event)">
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon [name]="selectTab == 'home' ? 'home' : 'home-outline'"></ion-icon>
+      <ion-label >Accueil</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="ar-launcher">
+      <ion-icon [name]="selectTab == 'ar-launcher' ? 'camera' : 'camera-outline'"></ion-icon>
+      <ion-label >Camera</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="historique">
+      <ion-icon  [name]="selectTab == 'historique' ? 'list-circle' : 'list-circle-outline'" ></ion-icon>
+      <ion-label>Historique</ion-label>
+    </ion-tab-button>
+    <!-- <ion-tab-button tab="propos">
+      <ion-icon name="receipt-outline"></ion-icon>
+      <ion-label>A propos</ion-label>
+    </ion-tab-button> -->
+  </ion-tab-bar>
+</ion-tabs>
